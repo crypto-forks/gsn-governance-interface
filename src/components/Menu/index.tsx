@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
-import { BookOpen, Code, Info, MessageCircle, PieChart } from 'react-feather'
+// import { BookOpen, Code, Info, MessageCircle, PieChart } from 'react-feather'
+import { BookOpen, Code, Info, MessageCircle } from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useActiveWeb3React } from '../../hooks'
@@ -85,7 +86,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/Uniswap/uniswap-interface'
+const CODE_LINK = 'https://github.com/opengsn/gsn'
 
 export default function Menu() {
   const { account } = useActiveWeb3React()
@@ -94,7 +95,10 @@ export default function Menu() {
   const open = useModalOpen(ApplicationModal.MENU)
   const toggle = useToggleModal(ApplicationModal.MENU)
   useOnClickOutside(node, open ? toggle : undefined)
-  const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
+  const openClaim = function() {
+    window.open('http://claim.opengsn.org', '_blank')
+  }
+  // const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
 
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
@@ -105,11 +109,11 @@ export default function Menu() {
 
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://uniswap.org/">
+          <MenuItem id="link" href="https://opengsn.org/">
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap.org/docs/v2">
+          <MenuItem id="link" href="https://docs.opengsn.org/">
             <BookOpen size={14} />
             Docs
           </MenuItem>
@@ -117,17 +121,17 @@ export default function Menu() {
             <Code size={14} />
             Code
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/FCfyBSbCU5">
+          <MenuItem id="link" href="https://forum.opengsn.org">
             <MessageCircle size={14} />
-            Discord
+            Forum
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap.info/">
-            <PieChart size={14} />
-            Analytics
-          </MenuItem>
+          {/*<MenuItem id="link" href="https://uniswap.info/">*/}
+          {/*  <PieChart size={14} />*/}
+          {/*  Analytics*/}
+          {/*</MenuItem>*/}
           {account && (
-            <ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
-              Claim UNI
+            <ButtonPrimary onClick={openClaim} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
+              Claim GSN
             </ButtonPrimary>
           )}
         </MenuFlyout>

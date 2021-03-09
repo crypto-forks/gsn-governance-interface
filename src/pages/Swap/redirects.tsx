@@ -9,6 +9,11 @@ export function RedirectPathToSwapOnly({ location }: RouteComponentProps) {
   return <Redirect to={{ ...location, pathname: '/swap' }} />
 }
 
+// Redirects to vote but only replace the pathname
+export function RedirectPathToVoteOnly({ location }: RouteComponentProps) {
+  return <Redirect to={{ ...location, pathname: '/vote' }} />
+}
+
 // Redirects from the /swap/:outputCurrency path to the /swap?outputCurrency=:outputCurrency format
 export function RedirectToSwap(props: RouteComponentProps<{ outputCurrency: string }>) {
   const {
