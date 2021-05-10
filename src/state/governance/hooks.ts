@@ -69,6 +69,13 @@ export function useDataFromEventLogs() {
             description: eventParsed.description,
             details: eventParsed.targets.map((target: string, i: number) => {
               const signature = eventParsed.signatures[i]
+              if (signature === '') {
+                return {
+                  target,
+                  functionSig: '<raw>',
+                  callData: eventParsed.calldatas[i]
+                }
+              }
               const [name, types] = signature.substr(0, signature.length - 1).split('(')
 
               const calldata = eventParsed.calldatas[i]
