@@ -50,7 +50,8 @@ export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
 
 // TODO: specify merkle distributor for mainnet
 export const MERKLE_DISTRIBUTOR_ADDRESS: { [chainId in ChainId]?: string } = {
-  [ChainId.MAINNET]: '0x090D4613473dEE047c3f2706764f49E0821D256e'
+  //AIRDROP address (should be from exported deployed_addresses..)
+  [ChainId.MAINNET]: '0x551d4f3331e3e7b900C3D0E93DBa9BF88339611C'
 }
 
 const WETH_ONLY: ChainTokenList = {

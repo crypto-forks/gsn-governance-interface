@@ -29,10 +29,11 @@ function fetchClaim(account: string, chainId: ChainId): Promise<UserClaimData | 
 
   return (CLAIM_PROMISES[key] =
     CLAIM_PROMISES[key] ??
-    fetch(`https://gentle-frost-9e74.uniswap.workers.dev/${chainId}/${formatted}`)
+    fetch(`https://claim.opengsn.org/proofs/proof-${account.toLowerCase().slice(2, 4)}.json`)
+      // fetch(`https://gentle-frost-9e74.uniswap.workers.dev/${chainId}/${formatted}`)
       .then(res => {
         if (res.status === 200) {
-          return res.json()
+          return res.json().then(data => data.claims[formatted])
         } else {
           console.debug(`No claim for account ${formatted} on chain ID ${chainId}`)
           return null

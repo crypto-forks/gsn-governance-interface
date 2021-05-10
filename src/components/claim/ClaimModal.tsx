@@ -98,11 +98,11 @@ export default function ClaimModal() {
             <CardNoise />
             <CardSection gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={500}>Claim UNI</TYPE.white>
+                <TYPE.white fontWeight={500}>Claim GSN</TYPE.white>
                 <CloseIcon onClick={toggleClaimModal} style={{ zIndex: 99 }} color="white" />
               </RowBetween>
               <TYPE.white fontWeight={700} fontSize={36}>
-                {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} UNI
+                {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} GSN
               </TYPE.white>
             </CardSection>
             <Break />
@@ -137,7 +137,7 @@ export default function ClaimModal() {
           <AutoColumn gap="md" style={{ padding: '1rem', paddingTop: '0' }} justify="center">
             <TYPE.subHeader fontWeight={500}>
               As a member of the GSN community you may claim GSN to be used for voting and governance. <br /> <br />
-              <ExternalLink href="https://uniswap.org/blog/uni">Read more about UNI</ExternalLink>
+              <ExternalLink href="https://opengsn.org/blog/">Read more about GSN</ExternalLink>
             </TYPE.subHeader>
             <ButtonPrimary
               disabled={!isAddress(account ?? '')}

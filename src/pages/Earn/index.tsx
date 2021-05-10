@@ -71,10 +71,10 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://uniswap.org/blog/uni/"
+                href="https://opengsn.org/blog/"
                 target="_blank"
               >
-                <TYPE.white fontSize={14}>Read more about UNI</TYPE.white>
+                <TYPE.white fontSize={14}>Read more about GSN</TYPE.white>
               </ExternalLink>
             </AutoColumn>
           </CardSection>
