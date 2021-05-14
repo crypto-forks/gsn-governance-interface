@@ -110,7 +110,7 @@ export default function ClaimModal() {
               {userClaimData?.flags?.isSOCKS && (
                 <RowBetween>
                   <TYPE.subHeader color="white">SOCKS</TYPE.subHeader>
-                  <TYPE.subHeader color="white">{SOCKS_AMOUNT} UNI</TYPE.subHeader>
+                  <TYPE.subHeader color="white">{SOCKS_AMOUNT} GSN</TYPE.subHeader>
                 </RowBetween>
               )}
               {userClaimData?.flags?.isLP &&
@@ -122,14 +122,14 @@ export default function ClaimModal() {
                       {unclaimedAmount
                         .subtract(new TokenAmount(unclaimedAmount.token, nonLPAmount))
                         .toFixed(0, { groupSeparator: ',' })}{' '}
-                      UNI
+                      GSN
                     </TYPE.subHeader>
                   </RowBetween>
                 )}
               {userClaimData?.flags?.isUser && (
                 <RowBetween>
                   <TYPE.subHeader color="white">User</TYPE.subHeader>
-                  <TYPE.subHeader color="white">{USER_AMOUNT} UNI</TYPE.subHeader>
+                  <TYPE.subHeader color="white">{USER_AMOUNT} GSN</TYPE.subHeader>
                 </RowBetween>
               )}
             </CardSection>
@@ -174,7 +174,7 @@ export default function ClaimModal() {
               </TYPE.largeHeader>
               {!claimConfirmed && (
                 <Text fontSize={36} color={'#ff007a'} fontWeight={800}>
-                  {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} UNI
+                  {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} GSN
                 </Text>
               )}
             </AutoColumn>

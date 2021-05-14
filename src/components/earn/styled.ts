@@ -40,7 +40,7 @@ export const CardBGImage = styled.span<{ desaturate?: boolean }>`
 `
 
 export const CardBGImageSmaller = styled.span<{ desaturate?: boolean }>`
-  background: url(${xlUnicorn});
+  // background: url(${xlUnicorn});
   width: 1200px;
   height: 1200px;
   position: absolute;

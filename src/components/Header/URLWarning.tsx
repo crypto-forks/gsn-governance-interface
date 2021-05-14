@@ -30,16 +30,16 @@ export default function URLWarning() {
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> Make sure the URL is
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.opengsn.org</code>
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>governance.opengsn.org</code>
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
-  ) : window.location.hostname === 'app.opengsn.org' ? (
+  ) : window.location.hostname === 'governance.opengsn.org' ? (
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> Always make sure the URL is
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.opengsn.org</code> - bookmark it
-        to be safe.
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>governance.opengsn.org</code> -
+        bookmark it to be safe.
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
