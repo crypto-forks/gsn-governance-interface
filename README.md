@@ -2,10 +2,9 @@
 
 An open source interface for GSN Governance.
 
-- Website: [opengsn.org](https://www.opengsn.org/)
+- Website: [opengsn.org](https://opengsn.org/)
 - Interface: [governance.opengsn.org](https://governance.opengsn.org)
 - Docs: [docs.opengsn.org](https://docs.opengsn.org/)
-- Email: [core@opengsn.org](mailto:core@opengsn.org)
 
 ## Accessing the GSN Governance Interface
 
