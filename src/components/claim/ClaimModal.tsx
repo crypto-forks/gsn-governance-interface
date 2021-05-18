@@ -137,7 +137,7 @@ export default function ClaimModal() {
           <AutoColumn gap="md" style={{ padding: '1rem', paddingTop: '0' }} justify="center">
             <TYPE.subHeader fontWeight={500}>
               As a member of the GSN community you may claim GSN to be used for voting and governance. <br /> <br />
-              <ExternalLink href="https://opengsn.org/blog/">Read more about GSN</ExternalLink>
+              <ExternalLink href="https://blog.opengsn.org/">Read more about GSN</ExternalLink>
             </TYPE.subHeader>
             <ButtonPrimary
               disabled={!isAddress(account ?? '')}

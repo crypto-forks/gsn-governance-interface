@@ -71,7 +71,7 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://opengsn.org/blog/"
+                href="https://blog.opengsn.org/"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>Read more about GSN</TYPE.white>
